@@ -17,7 +17,7 @@
             align-items: center;
             max-width: 800px;
             margin: 40px auto;
-            border: 1px solid white;
+            /* border: 1px solid white; */
             font: 300 100% 'Roboto Condensed', sans-serif;
             text-align: center;
             color: rgb(255, 255，255)
@@ -110,6 +110,14 @@
                 transform: scaleY(1)
             }
         }
+        /* :disables the animation previously applied to the rectangles
+            according  to the user's browser prefer settings.
+         */
+        @media (prefers-reduced-motion: reduce) {
+            rect {
+                animation: none;
+            }    
+        }
         div.box {
             width: 100px;
             height: 100px;
@@ -117,6 +125,20 @@
         }
         div.test-box {
             animation: doScale 2.2s infinite;
+        }
+        progress {
+            height: 30px;
+            width: 100%;
+            accent-color: #128688;
+        }
+        .restart-btn {
+            background-color: #128688;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -138,9 +160,34 @@
         </svg>
         <h1>Scanning channels</h1>
         <p>This may take a few minutes</p>
-        <progress value="32" max="100">32%</progress>
+        <progress id="progress-bar" value="32" max="100">32%</progress>
+        <button id="restart-btn" class="restart-btn">Restart</button>
     </section>
     <div class="box test-box"></div>
+    <script>
+        const progressBar = document.getElementById('progress-bar');
+        let progress = 0;
+        let intervalId = setInterval(() => {
+            progress += 1;
+            progressBar.value = progress;
+            if (progress === 100) {
+                clearInterval(intervalId);
+            }
+        }, 100);
+
+        const restartBtn = document.getElementById('restart-btn');
+        restartBtn.addEventListener('click', () => {
+            progress = 0;
+            progressBar.value = progress;
+            intervalId = setInterval(() => {
+                progress += 1;
+                progressBar.value = progress;
+                if (progress === 100) {
+                    clearInterval(intervalId);
+                }
+            }, 100);
+        });
+    </script>
 </body>
 
 </html>
