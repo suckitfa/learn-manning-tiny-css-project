@@ -6,6 +6,7 @@
     <title>Document</title>
     <style>
         @keyframes changeColor {
+            /* using percentage to define animation*/
             0% {
                 background-color: blue;
             }
@@ -18,6 +19,7 @@
         }
 
         @keyframes changeBorderRadius {
+            /* using keyframes to define animation */
             from {
                 border-radius: 0;
             }
@@ -36,8 +38,9 @@
         }
         div.animated-box {
             animation-name: changeColor, changeBorderRadius;
+            /* which means this can run 10 times in 3 sec */
             animation-duration: 3s;
-            animation-iteration-count: 10;
+            animation-iteration-count: infinite;
         }
         .container {
             border: 1px solid black;
