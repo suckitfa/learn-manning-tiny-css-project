@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>svg animation</title>
     <style>
         body {
             background-color: rgb(0, 28, 47);
@@ -129,7 +129,11 @@
         progress {
             height: 30px;
             width: 100%;
+            border-radius: 20px;
             accent-color: #128688;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
         }
         .restart-btn {
             background-color: #128688;
@@ -139,6 +143,11 @@
             padding: 10px 20px;
             font-size: 1.2rem;
             cursor: pointer;
+        }
+        
+        ::-webkit-progress-value {
+            border-radius: 20px;
+            background-color: #7be6e8;
         }
     </style>
 </head>
