@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes changeColor {
+            0% {
+                background-color: blue;
+            }
+            50% {
+                background-color: yellow;
+            }
+            100% {
+                background-color: red;
+            }
+        }
+
+        @keyframes changeBorderRadius {
+            from {
+                border-radius: 0;
+            }
+            50% {
+                border-radius: 50%;
+            }
+            to {
+                border-radius: 0;
+            }
+        }
+        div.box {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+        div.animated-box {
+            animation-name: changeColor, changeBorderRadius;
+            animation-duration: 3s;
+            animation-iteration-count: 10;
+        }
+        .container {
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="animated-box box">test</div>
+    </section>
+</body>
+</html>
