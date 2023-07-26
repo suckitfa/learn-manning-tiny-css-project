@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary Card....</title>
+    <style>
+        @import url("https:/ /fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+
+        body {
+            /* width: 100vw;
+            height: 100vh; */
+            margin-top: 40px;
+            padding: 20px;
+            display: grid;
+            place-items: center;
+            margin-top: 40px;
+            padding: 20px;
+        }
+
+        main {
+            display: grid;
+            max-width: 1024px;
+            grid-gap: 1rem;
+        }
+
+        @media (min-width: 700px) {
+            main {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            main>section {
+                height: 350px;
+            }
+
+            ;
+        }
+
+        @media (min-width: 950px) {
+            main {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        h1 {
+            font: 900 120px "Rubik", sans-serif;
+            text-transform: uppercase;
+            background: url(https://github.com/michaelgearon/Tiny-CSS-Projects/blob/main/chapter-05/after/bg-img.jpg?raw=true);
+            background-size: cover;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-text-fill-color: transparent;
+            -webkit-text-fill-color: transparent;
+            /*  // fallback color */
+            color: white;
+            /* background-color: #010101; */
+        }
+
+        .meeru-island {
+            background-image: url(https://github.com/michaelgearon/Tiny-CSS-Projects/blob/main/chapter-05/after/1.jpg?raw=true);
+        }
+
+        .flamingo-beech {
+            background-image: url(https://github.com/michaelgearon/Tiny-CSS-Projects/blob/main/chapter-05/after/2.jpg?raw=true);
+        }
+
+        .protur-safari {
+            background-image: url(https://github.com/michaelgearon/Tiny-CSS-Projects/blob/main/chapter-05/after/3.jpg?raw=true);
+        }
+
+        .mountain-view {
+            background-image: url(https://github.com/michaelgearon/Tiny-CSS-Projects/blob/main/chapter-05/after/4.jpg?raw=true);
+        }
+
+        main>section {
+            background-size: cover;
+            background-color: #3a8491;
+            border-radius: 4px;
+        }
+
+        /* card content container */
+        main>section>div {
+            background-color: rgba(0, 0, 0, .75);
+            margin: 1rem;
+            padding: 1rem;
+            color: whitesmoke;
+            text-align: center;
+            font: 14px 'Rubik', sans-serif;
+            height: calc(100% - 4rem);
+            display: grid;
+            grid-template-columns: min-content auto min-content;
+            align-items: center;
+        }
+
+        /* card header */
+        section h2 {
+            font-size: 1.3rem;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 0;
+        }
+
+        /* card content */
+        section p {
+            font: italic 1.125rem "Cardo", cursive;
+            line-height: 1.35;
+        }
+
+        /* a btn style */
+        a {
+            background-color: #ffa600;
+            color: rgba(0, 0, 0, .75);
+            padding: .75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: #e69500;
+        }
+
+        a:focus {
+            outline: 1px solid #ffa600;
+            outline-offset: 3px;
+        }
+
+        @media (hover:hover) and (prefers-reduced-motion: no-preference) {
+            main>section>div {
+                transform: translateY(calc(350px - 8rem));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- title -->
+    <header>
+        <h1>Hotels</h1>
+    </header>
+    <!-- cards container -->
+    <main>
+        <section class="meeru-island">
+            <div>
+                <h2>Meeru Island Resort & Spa</h2>
+                <p>The stylish Meeru Island....</p>
+                <a href="#">Learn More</a>
+            </div>
+        </section>
+        <section class="flamingo-beech">
+            <div>
+                <h2>Flamingo Beach</h2>
+                <p>Plenty of pools and activities to keep chidlren smiling,plus comfy apartments that are tailored for
+                    families.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </section>
+        <section class="protur-safari">
+            <div>
+                <h2>Protur Safari Park</h2>
+                <p>The big,family-friendly complex dishes up plenty of pools adn activities.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </section>
+        <section class="mountain-view">
+            <div>
+                <h2>Mountain View Resort.</h2>
+                <p>There are heaps of spots to soak in at the super-sized Holiday Village Costa del Sol.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
