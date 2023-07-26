@@ -45,12 +45,12 @@
 
         rect:nth-child(3) {
             fill: #20b38e;
-            animation-delay:400ms ;  
+            animation-delay: 400ms;
         }
 
         rect:nth-child(4) {
             fill: #22b78d;
-            animation-delay:600ms; 
+            animation-delay: 600ms;
         }
 
         rect:nth-child(5) {
@@ -95,11 +95,11 @@
             animation-iteration-count: infinite;
             transform-origin: center;
         }
+
         /* define animation */
         @keyframes doScale {
             from {
                 transform: scaleY(1)
-                
             }
 
             50% {
@@ -110,31 +110,37 @@
                 transform: scaleY(1)
             }
         }
+
         /* :disables the animation previously applied to the rectangles
             according  to the user's browser prefer settings.
          */
         @media (prefers-reduced-motion: reduce) {
             rect {
                 animation: none;
-            }    
+            }
         }
+
         div.box {
             width: 100px;
             height: 100px;
             background-color: #128688;
         }
+
         div.test-box {
             animation: doScale 2.2s infinite;
         }
+
         progress {
-            height: 30px;
-            width: 100%;
-            border-radius: 20px;
-            accent-color: #128688;
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
+            height: 24px;
+ width: 100%;
+ -webkit-appearance: none;
+ -moz-appearance: none;
+ appearance: none;
+ border-radius: 20px;
+ background: linear-gradient(to right, #128688 0%,#4db3ff 100%); 
+ border: none;
         }
+
         .restart-btn {
             background-color: #128688;
             color: white;
@@ -144,8 +150,23 @@
             font-size: 1.2rem;
             cursor: pointer;
         }
-        
+
         ::-webkit-progress-value {
+            border-radius: 20px;
+            background-color: #4db3ff;
+            background: linear-gradient(to right, #128688 0%, #4db3ff 100%);
+        }
+
+        ::-webkit-progress-inner-element {
+            border-radius: 20px;
+        }
+
+        ::-webkit-progress-value {
+            border-radius: 20px;
+            background-color: #7be6e8;
+        }
+
+        ::-moz-progress-bar {
             border-radius: 20px;
             background-color: #7be6e8;
         }
