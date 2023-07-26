@@ -9,8 +9,6 @@
         @import url("https:/ /fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
 
         body {
-            /* width: 100vw;
-            height: 100vh; */
             margin-top: 40px;
             padding: 20px;
             display: grid;
@@ -33,8 +31,6 @@
             main>section {
                 height: 350px;
             }
-
-            ;
         }
 
         @media (min-width: 950px) {
@@ -52,9 +48,7 @@
             -webkit-background-clip: text;
             -moz-text-fill-color: transparent;
             -webkit-text-fill-color: transparent;
-            /*  // fallback color */
             color: white;
-            /* background-color: #010101; */
         }
 
         .meeru-island {
@@ -88,9 +82,6 @@
             text-align: center;
             font: 14px 'Rubik', sans-serif;
             height: calc(100% - 4rem);
-            display: grid;
-            grid-template-columns: min-content auto min-content;
-            align-items: center;
         }
 
         /* card header */
@@ -125,9 +116,31 @@
             outline-offset: 3px;
         }
 
-        @media (hover:hover) and (prefers-reduced-motion: no-preference) {
+        @media (hover:hover) and (min-width: 700px) and (prefers-reduced-motion: no-preference) {
             main>section>div {
+                /* using calc func to calculate the translateY */
                 transform: translateY(calc(350px - 8rem));
+                height: 5rem;
+                overflow: hidden;
+                transition: all 700ms ease-in-out;
+            }
+
+            div>*:not(h2) {
+                opacity: 0;
+                transform: translateY(1rem);
+                transition: all 700ms ease-in-out;
+            }
+
+            section:hover div,
+            section:focus-within div {
+                transform: translateY(0);
+                height: calc(100% - 4rem);
+            }
+
+            main>section>div>*:not(h2),
+            section:focus-within div>*:not(h2) {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
