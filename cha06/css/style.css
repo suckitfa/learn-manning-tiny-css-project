@@ -1,0 +1,54 @@
+body {
+    /* 定义一些基础的CSS变量 */
+    --primary: #de3c4b;
+    --primary-contrast: white;
+    --secondary: #f2f2f2;
+    --font: Helvetica, Arial, sans-serif;
+    --text-color: #2D3142;
+    --card-background: #fff;
+    --technologies-background: #ffdadd;
+    --page-background:linear-gradient(#4f5d75,#2d3142);
+    --imageSize:200px;
+
+    background: var(--page-background);
+    font-family: var(--font);
+    color: var(--text-color);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    /* centering the card in the center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--card-background);
+    box-shadow:0 0 55px rgba(38, 40,45,.75);
+    width: 75vw;
+    border-radius: 4px;
+    text-align: center;
+    margin: calc(var(--imageSize) / 3 + 24px) 24px;
+    background-image: radial-gradient(
+        circle at top,
+        var(--primary) 50%,
+        transparent 50%,
+        transparent
+    );
+    background-size: 1500px 500px;
+    background-position: center -300px;
+    background-repeat: no-repeat;
+}
+
+img.portrait {
+    width: var(--imageSize);
+    height: var(--imageSize);
+    object-fit: cover;
+    border-radius: 50%;
+    /* 向上移动图片的 == 1/3 */
+    margin-top: calc(-1 * var(--imageSize)/3);
+}
