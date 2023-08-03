@@ -42,6 +42,7 @@ body {
     background-size: 1500px 500px;
     background-position: center -300px;
     background-repeat: no-repeat;
+    padding: 0 24px 24px;
 }
 
 img.portrait {
@@ -51,4 +52,93 @@ img.portrait {
     border-radius: 50%;
     /* 向上移动图片的 == 1/3 */
     margin-top: calc(-1 * var(--imageSize)/3);
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 36px 0 0;
+    color:var(--primary);
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+dl {
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: space-around;
+    gap: 12px;
+}
+
+dd {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+dl>div {
+    flex-basis: 33%;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+dt {
+    font-size: .75rem;
+}
+
+p.summary {
+    margin: 24px 0;
+    line-height: 1.5;
+}
+
+ul.technologies li {
+    padding: 12px 24px;
+    border-radius: 24px;
+    background: var(--technologies-background);
+}
+
+ul.technologies {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.actions a, .actions button {
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    border: solid 1px var(--primary);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.follow {
+    background: var(--primary);
+    color: var(--primary-contrast);
+}
+
+.message {
+    background-color: var(--primary-contrast);
+    color: var(--primary);
+}
+
+*:focus-visible {
+    outline: dotted 1px var(--primary);
+    outline-offset: 3px;
+}
+
+.actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 36px;
 }
